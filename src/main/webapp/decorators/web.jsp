@@ -1,25 +1,97 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@include file="/common/taglib.jsp" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
-    <title><dec:title default="Trang chủ" /></title>
+<meta charset="UTF-8">
+<title>Easy Accomod</title>
+<style>
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
 
-    <link href="<c:url value='/template/web/bootstrap/css/bootstrap.min.css' />" rel="stylesheet" type="text/css" media="all"/>
-    <link href="<c:url value='/template/css/style.css' />" type="text/css" rel="stylesheet" />
-    <link href="<c:url value='/template/vendor/all.min.css' />" rel="stylesheet" />
-    <link rel="stylesheet" href="<c:url value='/template/vendor/bootstrap.min.css' />" >
-    <script src="<c:url value='/template/vendor/jquery-3.5.1.min.js' />"></script>
+.topnav {
+	overflow: hidden;
+	background-color: #333;
+}
+
+.topnav a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.topnav a.active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.topnav .icon {
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.topnav a:not(:first-child) {
+		display: none;
+	}
+	.topnav a.icon {
+		float: right;
+		display: block;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.topnav.responsive {
+		position: relative;
+	}
+	.topnav.responsive .icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.topnav.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+}
+</style>
 </head>
 <body>
-	
-    
-   	<dec:body/>
+	<div class="topnav" id="myTopnav">
+		<a href="#home" class="active">Home</a> <a href="#news">News</a> <a
+			href="#contact">Contact</a> <a href="#about">About</a> <a
+			href="javascript:void(0);" class="icon" onclick="myFunction()"> <i
+			class="fa fa-bars"></i>
+		</a>
+	</div>
 
-	
-	
-	
-	<script src="<c:url value='/template/vendor/bootstrap.min.js' />" ></script>
-    <script src="<c:url value='/template/vendor/all.min.js' />"></script>
+	<div style="padding-left: 16px">
+		<h2>Responsive Topnav Example</h2>
+		<p>Resize the browser window to see how it works.</p>
+	</div>
+
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+	</script>
+
+
 </body>
 </html>
