@@ -11,22 +11,29 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.findroom.model.RoomModel;
-import com.findroom.service.IAddressService;
 import com.findroom.service.IRoomService;
-import com.findroom.service.IRoom_typeService;
 import com.findroom.utils.FormUtil;
 
-@WebServlet(urlPatterns = {"/admin-home"})
-public class HomeController extends HttpServlet {
+
+
+@WebServlet(urlPatterns = {"/admin-room-list"})
+public class RoomController extends HttpServlet {
 
 	private static final long serialVersionUID = 4965199485492466775L;
 	
+	@Inject
+	private IRoomService roomService;
+	
+	
+
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		RoomModel roomModel = new RoomModel();
+		roomModel.setListResult(roomService.findAll());
 		
-	
-		RequestDispatcher rd = req.getRequestDispatcher("/views/admin/home.jsp");
+		req.setAttribute("room", roomModel);
+		RequestDispatcher rd = req.getRequestDispatcher("/views/admin/room/list_room.jsp");
 		rd.forward(req, resp);
 	}
 	
