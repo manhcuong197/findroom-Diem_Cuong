@@ -11,7 +11,7 @@
 <style>
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .topnav {
@@ -72,7 +72,7 @@ input[type=text] {
   padding: 6px 10px;
   margin-top: 8px;
   margin-right: 16px;
-  background:  rgb(181, 225, 255);
+  background: #3a9dfa;
   font-size: 15px;
   border: solid 0.5px black;
   border-radius: 2px;
@@ -138,6 +138,99 @@ input[type=text] {
   display: block;
 }
 
+.container{
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 212px;
+    border: 0.5px black solid;
+    border-radius: 3px;
+}
+
+.title{
+    margin-left: 10px;
+}
+
+.img-contain{
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.btn-img{
+	font-size: 18px;
+	color: white;
+    width: 42%;
+    height: 250px;
+    margin-top: 10px;
+    margin-left: 5%;
+    background-position: center; /* Center the image */
+  	background-repeat: no-repeat; /* Do not repeat the image */
+  	background-size: cover;
+      border-radius: 5px;
+}
+
+#hn{
+ background-image: url("https://tourdulichuytin.com/images/tin-tuc/cam-nang-du-lich/ha-noi/ho-hoan-kiem-ve-dem.jpg");
+}
+
+#hcm{
+ background-image: url("https://file1.dangcongsan.vn/data/0/images/2020/01/22/maipq/tp-hcm.jpg?dpi=150&quality=100&w=680");
+}
+ 
+.news-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img{
+    margin: 3%;
+    width: 150px;
+    height: 150px;
+    border: 0.5px solid black;
+}
+
+.news-form p{
+    font-size: 12px;
+}
+
+.news-form{
+    display: flex;
+    width: 48%;
+    margin: 8px;
+    height: 180px;
+    border: 0.5px solid black;
+    background-color: #faeed849;
+}
+.image{
+    margin: 3px;
+}
+.text{
+    margin-left: 10px;
+}
+
+.news-form p.news-title{
+    font-size: 16px;
+    font-weight: 600;
+    color: #1100ff;
+}
+
+.news-form p.news-price{
+    color: red;
+    font-size: 16px;
+    font-weight: 600;
+}
+.news-form p.news-area{
+    display: inline;
+    margin-right: 30px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.news-form p.news-address{
+    display: inline;
+    font-size: 15px;
+    font-weight: 600;
+}
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
@@ -149,13 +242,36 @@ input[type=text] {
       padding-right: 0px;
   }
   #login{
-      float: right;
+      float: left;
   }
   .search-container{
       padding-left: 0px;
+      padding-right: 0px;
+  }
+  .search-bar{
+  	float: left;
   }
   .dropdown {
       float: none;
+  }
+  .container{
+      margin-left: 2px;
+      margin-right: 2px;
+  }
+  .img-contain{
+  		display: block;
+  }
+  .btn-img{
+  		margin-left: 5%;
+  		 width: 90%;
+    	height: 210px;
+  }
+  .news-container{
+      display: block;
+  }
+  .news-form{
+      width: 90%;
+      margin-left: 5%;
   }
 }
 
@@ -171,7 +287,9 @@ input[type=text] {
     display: block;
     text-align: left;
   }
-
+	 .img-contain{
+  		display: block;
+  }
 }
 </style>
 </head>
@@ -234,8 +352,149 @@ input[type=text] {
 
     <br>
     <br>
-	<div>
-		<p>Resize the browser window to see how it works.</p>
+	<div class="container">
+        <h3 class="title">Khu vực nổi bật</h3>
+        <div class="img-contain">
+            <button class="btn-img" id="hcm">Hồ Chí Minh</button>
+            <button class="btn-img" id="hn">Hà Nội</button>
+        </div>
+        <hr>
+        <h3 class="title">Bảng tin</h3>
+        <div class="news-container">
+            <div class="news-form">
+                <div class="image">
+                    <img src="https://timviec365.com/pictures/news/2020/03/13/pvk1584102929.jpg" alt="#" class="img">                    
+                </div>
+                <div class="text">
+                    <p class="news-title">Cho thuê phòng trọ quân Cầu Giấy full nội thất</p>
+                    <p class="news-price">2 triệu - 3 triệu</p>
+                    <p class="news-area">20 mét vuông</p>
+                    <p class="news-address">Cầu Giấy - Hà Nội</p>
+                    <p class="news-des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptate modi mollitia!</p>
+                </div>  
+            </div>
+            <div class="news-form">
+                <div class="image">
+                    <img src="https://timviec365.com/pictures/news/2020/03/13/pvk1584102929.jpg" alt="#" class="img">                    
+                </div>
+                <div class="text">
+                    <p class="news-title">Cho thuê phòng trọ quân Cầu Giấy full nội thất</p>
+                    <p class="news-price">2 triệu - 3 triệu</p>
+                    <p class="news-area">20 mét vuông</p>
+                    <p class="news-address">Cầu Giấy - Hà Nội</p>
+                    <p class="news-des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptate modi mollitia!</p>
+                </div>  
+            </div>
+            <div class="news-form">
+                <div class="image">
+                    <img src="https://timviec365.com/pictures/news/2020/03/13/pvk1584102929.jpg" alt="#" class="img">                    
+                </div>
+                <div class="text">
+                    <p class="news-title">Cho thuê phòng trọ quân Cầu Giấy full nội thất</p>
+                    <p class="news-price">2 triệu - 3 triệu</p>
+                    <p class="news-area">20 mét vuông</p>
+                    <p class="news-address">Cầu Giấy - Hà Nội</p>
+                    <p class="news-des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptate modi mollitia!</p>
+                </div>  
+            </div>
+            <div class="news-form">
+                <div class="image">
+                    <img src="https://timviec365.com/pictures/news/2020/03/13/pvk1584102929.jpg" alt="#" class="img">                    
+                </div>
+                <div class="text">
+                    <p class="news-title">Cho thuê phòng trọ quân Cầu Giấy full nội thất</p>
+                    <p class="news-price">2 triệu - 3 triệu</p>
+                    <p class="news-area">20 mét vuông</p>
+                    <p class="news-address">Cầu Giấy - Hà Nội</p>
+                    <p class="news-des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptate modi mollitia!</p>
+                </div>  
+            </div>
+            <div class="news-form">
+                <div class="image">
+                    <img src="https://timviec365.com/pictures/news/2020/03/13/pvk1584102929.jpg" alt="#" class="img">                    
+                </div>
+                <div class="text">
+                    <p class="news-title">Cho thuê phòng trọ quân Cầu Giấy full nội thất</p>
+                    <p class="news-price">2 triệu - 3 triệu</p>
+                    <p class="news-area">20 mét vuông</p>
+                    <p class="news-address">Cầu Giấy - Hà Nội</p>
+                    <p class="news-des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptate modi mollitia!</p>
+                </div>  
+            </div>
+            <div class="news-form">
+                <div class="image">
+                    <img src="https://timviec365.com/pictures/news/2020/03/13/pvk1584102929.jpg" alt="#" class="img">                    
+                </div>
+                <div class="text">
+                    <p class="news-title">Cho thuê phòng trọ quân Cầu Giấy full nội thất</p>
+                    <p class="news-price">2 triệu - 3 triệu</p>
+                    <p class="news-area">20 mét vuông</p>
+                    <p class="news-address">Cầu Giấy - Hà Nội</p>
+                    <p class="news-des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptate modi mollitia!</p>
+                </div>  
+            </div>
+            <div class="news-form">
+                <div class="image">
+                    <img src="https://timviec365.com/pictures/news/2020/03/13/pvk1584102929.jpg" alt="#" class="img">                    
+                </div>
+                <div class="text">
+                    <p class="news-title">Cho thuê phòng trọ quân Cầu Giấy full nội thất</p>
+                    <p class="news-price">2 triệu - 3 triệu</p>
+                    <p class="news-area">20 mét vuông</p>
+                    <p class="news-address">Cầu Giấy - Hà Nội</p>
+                    <p class="news-des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptate modi mollitia!</p>
+                </div>  
+            </div>
+            <div class="news-form">
+                <div class="image">
+                    <img src="https://timviec365.com/pictures/news/2020/03/13/pvk1584102929.jpg" alt="#" class="img">                    
+                </div>
+                <div class="text">
+                    <p class="news-title">Cho thuê phòng trọ quân Cầu Giấy full nội thất</p>
+                    <p class="news-price">2 triệu - 3 triệu</p>
+                    <p class="news-area">20 mét vuông</p>
+                    <p class="news-address">Cầu Giấy - Hà Nội</p>
+                    <p class="news-des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptate modi mollitia!</p>
+                </div>  
+            </div>
+            <div class="news-form">
+                <div class="image">
+                    <img src="https://timviec365.com/pictures/news/2020/03/13/pvk1584102929.jpg" alt="#" class="img">                    
+                </div>
+                <div class="text">
+                    <p class="news-title">Cho thuê phòng trọ quân Cầu Giấy full nội thất</p>
+                    <p class="news-price">2 triệu - 3 triệu</p>
+                    <p class="news-area">20 mét vuông</p>
+                    <p class="news-address">Cầu Giấy - Hà Nội</p>
+                    <p class="news-des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptate modi mollitia!</p>
+                </div>  
+            </div>
+            <div class="news-form">
+                <div class="image">
+                    <img src="https://timviec365.com/pictures/news/2020/03/13/pvk1584102929.jpg" alt="#" class="img">                    
+                </div>
+                <div class="text">
+                    <p class="news-title">Cho thuê phòng trọ quân Cầu Giấy full nội thất</p>
+                    <p class="news-price">2 triệu - 3 triệu</p>
+                    <p class="news-area">20 mét vuông</p>
+                    <p class="news-address">Cầu Giấy - Hà Nội</p>
+                    <p class="news-des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptate modi mollitia!</p>
+                </div>  
+            </div>
+            <div class="news-form">
+                <div class="image">
+                    <img src="https://timviec365.com/pictures/news/2020/03/13/pvk1584102929.jpg" alt="#" class="img">                    
+                </div>
+                <div class="text">
+                    <p class="news-title">Cho thuê phòng trọ quân Cầu Giấy full nội thất</p>
+                    <p class="news-price">2 triệu - 3 triệu</p>
+                    <p class="news-area">20 mét vuông</p>
+                    <p class="news-address">Cầu Giấy - Hà Nội</p>
+                    <p class="news-des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque voluptate modi mollitia!</p>
+                </div>  
+            </div>
+            
+        </div>
 	</div>
 
 	<script>
