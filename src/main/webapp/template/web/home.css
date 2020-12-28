@@ -59,13 +59,14 @@ input[type=text] {
   cursor: pointer;
 }
 .search-container button:hover {
-  background: #ccc;
+  background:rgb(181, 225, 255);
 }
 .search-bar{
     display: inline;
     float: right;
 }
 .dropdown {
+	width: 180px;
     float: left;
     overflow: hidden;
 }
@@ -160,7 +161,7 @@ input[type=text] {
     width: 48%;
     margin: 8px;
     height: 180px;
-    border: 0.5px solid black;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
     background-color: #faeed849;
 }
 .image{
@@ -190,6 +191,12 @@ input[type=text] {
     font-size: 15px;
     font-weight: 600;
 }
+#dangtin{
+	float: right;	
+}
+.search-container button.loctin{
+	float: left;	
+}
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
@@ -209,6 +216,7 @@ input[type=text] {
   }
   .search-bar{
   	float: left;
+  	margin-right: 150px;
   }
   .dropdown {
       float: none;

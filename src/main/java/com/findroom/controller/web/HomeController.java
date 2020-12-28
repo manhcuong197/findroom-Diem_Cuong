@@ -12,7 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.findroom.utils.FormUtil;
 import com.findroom.utils.SessionUtil;
+import com.findroom.model.RoleModel;
+import com.findroom.model.RoomModel;
 import com.findroom.model.UserModel;
+import com.findroom.service.IRoomService;
 import com.findroom.service.IUserService;
 
 @WebServlet(urlPatterns = { "/trang-chu","/Dang-nhap","/Dang-ky","/thoat" })
@@ -23,6 +26,8 @@ public class HomeController extends HttpServlet {
 	
 	@Inject
 	private IUserService userService;
+	@Inject
+	private IRoomService roomService;
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
@@ -38,6 +43,9 @@ public class HomeController extends HttpServlet {
 			SessionUtil.getInstance().removeValue(req, "USERMODEL");
 			resp.sendRedirect(req.getContextPath() + "/trang-chu");
 		} else {
+		RoomModel roomModel=new RoomModel();
+		roomModel.setListResult(roomService.findAll());
+		req.setAttribute("room", roomModel);
 		RequestDispatcher rd = req.getRequestDispatcher("/views/web/home.jsp");
 		rd.forward(req, resp);
 		}
