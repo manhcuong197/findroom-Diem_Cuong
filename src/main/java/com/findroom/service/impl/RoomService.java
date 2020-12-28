@@ -1,6 +1,7 @@
 package com.findroom.service.impl;
 
 
+
 import java.util.List;
 
 import javax.inject.Inject;
@@ -40,8 +41,28 @@ public class RoomService implements IRoomService{
 	}
 	@Override
 	public RoomModel save(RoomModel roomModel) {
-		// TODO Auto-generated method stub
-		return null;
+		Room_typeModel typeModel = typeDao.findOneByType(roomModel.getTypeRoom());
+		roomModel.setId_room_type(typeModel.getId());
+		AddressModel addrModel = addressDao.findOneByStreet(roomModel.getStreetRoom());
+		roomModel.setId_address(addrModel.getId());
+		Long roomId = roomDao.save(roomModel);
+		return roomDao.findOne(roomId);
+	}
+	@Override
+	public void delete(long[] ids) {
+		for(long id: ids) {
+			roomDao.delete(id);
+		}
+	}
+	@Override
+	public RoomModel update(RoomModel updateRoom) {
+		RoomModel roomModel = roomDao.findOne(updateRoom.getId());
+		Room_typeModel typeModel = typeDao.findOneByType(updateRoom.getTypeRoom());
+		updateRoom.setId_room_type(typeModel.getId());
+		AddressModel addrModel = addressDao.findOneByStreet(updateRoom.getStreetRoom());
+		updateRoom.setId_address(addrModel.getId());
+		roomDao.update(updateRoom);
+		return roomDao.findOne(updateRoom.getId());
 	}
 	
 

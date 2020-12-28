@@ -31,7 +31,6 @@ public class RoomController extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		RoomModel roomModel = new RoomModel();
 		roomModel.setListResult(roomService.findAll());
-		
 		req.setAttribute("room", roomModel);
 		RequestDispatcher rd = req.getRequestDispatcher("/views/admin/room/list_room.jsp");
 		rd.forward(req, resp);

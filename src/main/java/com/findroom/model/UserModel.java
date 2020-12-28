@@ -7,6 +7,16 @@ public class UserModel extends AbstractModel<UserModel> {
 	private String phone;
 	private String email;
 	private String address;
+	private RoleModel roleModel=new RoleModel();
+	
+	public RoleModel getRoleModel() {
+		return roleModel;
+	}
+
+	public void setRoleModel(RoleModel roleModel) {
+		this.roleModel = roleModel;
+	}
+
 	public Long getId_rold() {
 		return id_rold;
 	}

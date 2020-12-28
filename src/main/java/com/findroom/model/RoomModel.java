@@ -3,7 +3,6 @@ package com.findroom.model;
 public class RoomModel extends AbstractModel<RoomModel> {
 	private Long id_room_type;
 	private Long id_address;
-	private Long id_user;
 	private String description;
 	private Long price;
 	private Long area;
@@ -22,7 +21,7 @@ public class RoomModel extends AbstractModel<RoomModel> {
 	private String districtRoom;
 	private String cityRoom;
 	
- 	public String getTypeRoom() {
+	public String getTypeRoom() {
 		return typeRoom;
 	}
 	public void setTypeRoom(String typeRoom) {
@@ -69,12 +68,6 @@ public class RoomModel extends AbstractModel<RoomModel> {
 	}
 	public void setId_address(Long id_address) {
 		this.id_address = id_address;
-	}
-	public Long getId_user() {
-		return id_user;
-	}
-	public void setId_user(Long id_user) {
-		this.id_user = id_user;
 	}
 	public Long getPrice() {
 		return price;

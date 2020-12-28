@@ -5,6 +5,7 @@ import java.sql.SQLException;
 
 import com.findroom.model.RoomModel;
 
+
 public class RoomMapper implements RowMapper<RoomModel> {
 
 	@Override
@@ -13,7 +14,6 @@ public class RoomMapper implements RowMapper<RoomModel> {
 			RoomModel roomModel=new RoomModel();
 			roomModel.setId(resultSet.getLong("id"));
 			roomModel.setId_address(resultSet.getLong("id_address"));
-			roomModel.setId_user(resultSet.getLong("id_user"));
 			roomModel.setId_room_type(resultSet.getLong("id_room_type"));
 			roomModel.setAir_conditioning(resultSet.getString("air_conditioning"));
 			roomModel.setArea(resultSet.getLong("area"));
@@ -27,6 +27,7 @@ public class RoomMapper implements RowMapper<RoomModel> {
 			roomModel.setPost_time(resultSet.getString("post_time"));
 			roomModel.setStatus(resultSet.getString("status"));
 			roomModel.setDescription(resultSet.getString("description"));
+			
 			return roomModel;
 		} catch (SQLException e) {
 			return null;

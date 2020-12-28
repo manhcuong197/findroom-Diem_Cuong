@@ -2,6 +2,7 @@ package com.findroom.controller.admin;
 
 import java.io.IOException;
 
+import javax.enterprise.inject.New;
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,12 +21,12 @@ import com.findroom.utils.FormUtil;
 public class HomeController extends HttpServlet {
 
 	private static final long serialVersionUID = 4965199485492466775L;
-	
+	@Inject
+	private IRoomService roomService;
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-	
 		RequestDispatcher rd = req.getRequestDispatcher("/views/admin/home.jsp");
 		rd.forward(req, resp);
 	}

@@ -19,4 +19,11 @@ public class Room_typeService implements IRoom_typeService {
 		return iRoom_typeDAO.findAll();
 	}
 
+	@Override
+	public Room_typeModel save(Room_typeModel room_typeModel) {
+		Long roomID=iRoom_typeDAO.save(room_typeModel);
+		System.out.print(roomID);
+		return null;
+	}
+
 }

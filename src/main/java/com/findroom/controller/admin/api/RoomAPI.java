@@ -41,8 +41,7 @@ public class RoomAPI extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 		resp.setContentType("application/json");
 		RoomModel updateRoom = HttpUtil.of(req.getReader()).toModel(RoomModel.class);
-		
-		
+		updateRoom = roomService.update(updateRoom);
 		mapper.writeValue(resp.getOutputStream(), updateRoom);
 	}
 	
@@ -52,7 +51,7 @@ public class RoomAPI extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 		resp.setContentType("application/json");
 		RoomModel roomModel = HttpUtil.of(req.getReader()).toModel(RoomModel.class);
-	
+		roomService.delete(roomModel.getIds());
 		mapper.writeValue(resp.getOutputStream(), "{}");
 	}
 }

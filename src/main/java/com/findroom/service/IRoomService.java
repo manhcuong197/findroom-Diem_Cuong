@@ -8,4 +8,7 @@ public interface IRoomService {
 	List<RoomModel> findAll();
 	RoomModel findOne(Long id);
 	RoomModel save(RoomModel roomModel);
+	RoomModel update(RoomModel updateRoom);
+	//delete
+	void delete(long[] ids);
 }

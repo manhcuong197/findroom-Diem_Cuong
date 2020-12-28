@@ -25,23 +25,24 @@
 								<div class="table-responsive">
 									<table class="table table-bordered">
 									    <thead>
+									    
 									      <tr>
-									        <th>STT</th>
-									        <th>Loại Phòng</th>
+									        <th>Ảnh</th>
 									        <th>Mô tả</th>
 									        <th>Thông tin phòng</th>
 									        <th> Trạng thái</th>
+									        <th></th>
 									      </tr>
 									    </thead>
+									    <c:forEach var="item" items="${room.listResult }">
 									    <tbody>
-									      <c:forEach var="item" items="${room.listResult }">
-									      	<td>${item.id}</td>
-									      	<td>${item.typeRoom}</td>
-									      	<td>${item.description }</td>
-									      	<td>${item.price}</td>
+									      	<td>${item.image}</td>
+									      	<td>${item.description}</td>
+									      	<td>Giá tiền:${item.price} triệu/tháng, Diện tích:${item.area}m<sup>2</sup></td>
 									      	<td>${item.status}</td>
-									      </c:forEach>
+									      	<td>edit</td>
 									    </tbody>
+									    </c:forEach>
 									  </table>
 								</div>
 							</div>
