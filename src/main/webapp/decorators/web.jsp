@@ -231,6 +231,9 @@ input[type=text] {
     font-size: 15px;
     font-weight: 600;
 }
+#dangtin{
+	float: right;
+}
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
@@ -301,8 +304,9 @@ input[type=text] {
         <a href="#timnguoioghep">Tìm người ở ghép</a> 
         <a href="javascript:void(0);" class="icon" onclick="myFunction()"> 
             <i class="fa fa-bars"></i>
-            <a href="#" id="login"><i class="fa fa-fw fa-user"></i>Đăng nhập</a>
-		</a>
+            <a href="#" id="login" class="active"><i class="fa fa-fw fa-user"></i>Đăng nhập</a>
+		</a> 
+        <a href="#" id="dangtin" class="active"> Đăng tin</a>
     </div>
     
     <div class="search-container">
