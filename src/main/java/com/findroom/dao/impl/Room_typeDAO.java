@@ -23,7 +23,7 @@ public class Room_typeDAO extends AbstractDAO<Room_typeModel> implements IRoom_t
 	}
 
 	@Override
-	public Room_typeModel findOneByType(String type) {
+	public Room_typeModel findOneByType_room(String type) {
 		String sql = "SELECT * FROM room_type WHERE type_room = ?";
 		List<Room_typeModel> types = query(sql, new Room_typeMapper(), type);
 		return types.isEmpty() ? null : types.get(0);

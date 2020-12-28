@@ -32,7 +32,8 @@
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     <script type="text/javascript">
-    	$('#test').click(function(){
+    	$('#test').click(function(e){
+    		e.preventDefault();
     		var data = {};
 			var formSignup = $('#formSignup').serializeArray();
 			$.each(formSignup, function(i, v){

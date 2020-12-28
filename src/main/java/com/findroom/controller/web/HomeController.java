@@ -12,11 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.findroom.utils.FormUtil;
 import com.findroom.utils.SessionUtil;
-import com.findroom.model.RoomModel;
-import com.findroom.model.Room_typeModel;
 import com.findroom.model.UserModel;
-import com.findroom.service.IRoomService;
-import com.findroom.service.IRoom_typeService;
 import com.findroom.service.IUserService;
 
 @WebServlet(urlPatterns = { "/trang-chu","/Dang-nhap","/Dang-ky","/thoat" })
@@ -24,12 +20,10 @@ public class HomeController extends HttpServlet {
 
 	private static final long serialVersionUID = -1539055028511515030L;
 	
-	@Inject
-	private IRoom_typeService iRoom_typeService;
+	
 	@Inject
 	private IUserService userService;
-	@Inject
-	private IRoomService roomService;
+	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		String action = req.getParameter("action");

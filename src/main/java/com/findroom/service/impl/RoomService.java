@@ -41,7 +41,7 @@ public class RoomService implements IRoomService{
 	}
 	@Override
 	public RoomModel save(RoomModel roomModel) {
-		Room_typeModel typeModel = typeDao.findOneByType(roomModel.getTypeRoom());
+		Room_typeModel typeModel = typeDao.findOneByType_room(roomModel.getTypeRoom());
 		roomModel.setId_room_type(typeModel.getId());
 		AddressModel addrModel = addressDao.findOneByStreet(roomModel.getStreetRoom());
 		roomModel.setId_address(addrModel.getId());
@@ -56,8 +56,8 @@ public class RoomService implements IRoomService{
 	}
 	@Override
 	public RoomModel update(RoomModel updateRoom) {
-		RoomModel roomModel = roomDao.findOne(updateRoom.getId());
-		Room_typeModel typeModel = typeDao.findOneByType(updateRoom.getTypeRoom());
+		
+		Room_typeModel typeModel = typeDao.findOneByType_room(updateRoom.getTypeRoom());
 		updateRoom.setId_room_type(typeModel.getId());
 		AddressModel addrModel = addressDao.findOneByStreet(updateRoom.getStreetRoom());
 		updateRoom.setId_address(addrModel.getId());

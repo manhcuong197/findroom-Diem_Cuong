@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.findroom.model.RoomModel;
+import com.findroom.service.IAddressService;
 import com.findroom.service.IRoomService;
+import com.findroom.service.IRoom_typeService;
 import com.findroom.utils.FormUtil;
 
 
@@ -24,15 +26,34 @@ public class RoomController extends HttpServlet {
 	@Inject
 	private IRoomService roomService;
 	
-	
+	@Inject
+	private IRoom_typeService room_typeService;
+	@Inject
+	private IAddressService addressService;
 
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		RoomModel roomModel = new RoomModel();
-		roomModel.setListResult(roomService.findAll());
+		RoomModel roomModel = FormUtil.toModel(RoomModel.class, req);
+		String type = req.getParameter("type");
+		String view ="";
+		if(roomModel.getType().equals("list")){
+			roomModel.setListResult(roomService.findAll());
+			req.setAttribute("room", roomModel);
+			view="/views/admin/room/list_room.jsp";
+			
+		} else if (roomModel.getType().equals("edit")) {
+			if (roomModel.getId()!=null) {
+				roomModel=roomService.findOne(roomModel.getId());
+				
+			
+			}
+			req.setAttribute("type",room_typeService.findAll() );
+			req.setAttribute("address", addressService.findAll());
+			view="/views/admin/room/edit.jsp";
+		}
 		req.setAttribute("room", roomModel);
-		RequestDispatcher rd = req.getRequestDispatcher("/views/admin/room/list_room.jsp");
+		RequestDispatcher rd = req.getRequestDispatcher(view);
 		rd.forward(req, resp);
 	}
 	

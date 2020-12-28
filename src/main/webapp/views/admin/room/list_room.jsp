@@ -17,40 +17,67 @@
 				</ul>
 				<!-- /.breadcrumb -->
 			</div>
+			
 			<div class="page-content">
 				<div class="row">
-					<div class"col-xs-12">
-						<div class="row">
-							<div class="col-xs-12">
-								<div class="table-responsive">
-									<table class="table table-bordered">
-									    <thead>
-									    
-									      <tr>
-									        <th>Ảnh</th>
-									        <th>Mô tả</th>
-									        <th>Thông tin phòng</th>
-									        <th> Trạng thái</th>
-									        <th></th>
-									      </tr>
-									    </thead>
-									    <c:forEach var="item" items="${room.listResult }">
-									    <tbody>
-									      	<td>${item.image}</td>
-									      	<td>${item.description}</td>
-									      	<td>Giá tiền:${item.price} triệu/tháng, Diện tích:${item.area}m<sup>2</sup></td>
-									      	<td>${item.status}</td>
-									      	<td>edit</td>
-									    </tbody>
-									    </c:forEach>
-									  </table>
+					<div class="col-xs-12">
+					<div class="widget-box table-filter">
+						<div class="table-btn-controls">
+							<div class="pull-right tableTools-container">
+								<div class="dt-buttons btn-overlap btn-group">
+									<a flag="info"
+										class="dt-button buttons-colvis btn btn-white btn-primary btn-bold"
+										data-toggle="tooltip" title='Thêm Phòng Trọ'
+										href='<c:url value="/admin-room-list?type=edit"/>'> <span>
+											<i class="fa fa-plus-circle bigger-110 purple"></i>
+									</span>
+									</a>
+									<button id="btnDelete" type="button"
+										class="dt-button buttons-html5 btn btn-white btn-primary btn-bold"
+										data-toggle="tooltip" title='Xóa Phòng'>
+										<span> <i class="fa fa-trash-o bigger-110 pink"></i>
+										</span>
+									</button>
 								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="table-responsive">
+								<table class="table table-bordered">
+									<thead>
+
+										<tr>
+											<th>Ảnh</th>
+											<th>Mô tả</th>
+											<th>Thông tin phòng</th>
+											<th>Trạng thái</th>
+											<th>Thay đổi</th>
+										</tr>
+									</thead>
+									<c:forEach var="item" items="${room.listResult }">
+										<tbody>
+											<td>${item.image}</td>
+											<td>${item.description}</td>
+											<td>Giá tiền:${item.price} triệu/tháng, Diện
+												tích:${item.area}m<sup>2</sup>
+											</td>
+											<td>${item.status}</td>
+											<td><c:url var="editURL" value="/admin-room-list">
+													<c:param name="type" value="edit" />
+													<c:param name="id" value="${item.id }" />
+												</c:url> <a class="btn btn-sm btn-primary btn-edit" data-toggle="tooltip" href='${editURL }'><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a></td>
+										</tbody>
+									</c:forEach>
+								</table>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 	<!-- /.main-content -->
 </body>

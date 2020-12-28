@@ -32,7 +32,7 @@ public class RoomAPI extends HttpServlet {
 		RoomModel roomModel = HttpUtil.of(req.getReader()).toModel(RoomModel.class);
 		roomModel = roomService.save(roomModel);
 		mapper.writeValue(resp.getOutputStream(), roomModel);
-		mapper.writeValue(resp.getOutputStream(), roomModel);
+		
 	}
 	
 	@Override

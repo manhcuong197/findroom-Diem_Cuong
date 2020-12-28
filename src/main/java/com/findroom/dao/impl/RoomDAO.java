@@ -16,7 +16,7 @@ public  class RoomDAO extends AbstractDAO<RoomModel> implements IRoomDAO {
 
 	@Override
 	public Long save(RoomModel roomModel) {
-		String sql = "INSERT INTO room (id_room_type,id_address, price, area, bathroom, kitchen, air_conditioning, bacony,electricity,water, image,post_time, status,description) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO room (id_room_type,id_address, price, area, bathroom, kitchen, air_conditioning, balcony,electricity,water, image,post_time, status,description) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		return insert(sql, roomModel.getId_room_type(),roomModel.getId_address(),roomModel.getPrice(),roomModel.getArea(),roomModel.getBathroom(),
 				roomModel.getKitchen(),roomModel.getAir_conditioning(),roomModel.getBalcony(),roomModel.getElectricity(),roomModel.getWater(),roomModel.getImage(),roomModel.getPost_time(),
 				roomModel.getStatus(),roomModel.getDescription());
@@ -36,7 +36,7 @@ public  class RoomDAO extends AbstractDAO<RoomModel> implements IRoomDAO {
 
 	@Override
 	public void update(RoomModel updateRoom) {
-		String sql = "UPDATE room SET id_room_type=?,id_address=?, price=?, area=?, bathroom=?, kitchen=?, air_conditioning=?, bacony=?,electricity=?,water=?, image=?,post_time=?, status=?,description=? WHERE id=?";
+		String sql = "UPDATE room SET id_room_type=?,id_address=?, price=?, area=?, bathroom=?, kitchen=?, air_conditioning=?, balcony=?,electricity=?,water=?, image=?,post_time=?, status=?,description=? WHERE id=?";
 		update(sql,updateRoom.getId_room_type(),updateRoom.getId_address(),updateRoom.getPrice(),updateRoom.getArea(),updateRoom.getBathroom(),
 				updateRoom.getKitchen(),updateRoom.getAir_conditioning(),updateRoom.getBalcony(),updateRoom.getElectricity(),updateRoom.getWater(),updateRoom.getImage(),updateRoom.getPost_time(),
 				updateRoom.getStatus(),updateRoom.getDescription(),updateRoom.getId());

@@ -44,7 +44,7 @@
             <b class="arrow"></b>
             <ul class="submenu">
                 <li>
-                    <a href='<c:url value="/admin-room-list"/>'>
+                    <a href='<c:url value="/admin-room-list?type=list"/>'>
                         <i class="menu-icon fa fa-caret-right"></i>
                         DS Phòng Trọ
                     </a>

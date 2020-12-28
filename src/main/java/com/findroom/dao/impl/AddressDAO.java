@@ -13,7 +13,7 @@ public class AddressDAO extends AbstractDAO<AddressModel> implements IAddressDAO
 
 	@Override
 	public List<AddressModel> findAll() {
-		String sql = "SELECT distinct * FROM address";
+		String sql = "SELECT * FROM address";
 		return query(sql, new AddressMapper());
 	}
 	@Override
