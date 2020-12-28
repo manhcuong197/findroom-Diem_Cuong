@@ -20,4 +20,7 @@
      <decorator name="signup" page="signup.jsp">
     	<pattern>/Dang-ky</pattern>
     </decorator>
+    <decorator name="roomDetail" page="RoomDetail.jsp">
+    	<pattern>/chi-tiet</pattern>
+    </decorator>
 </decorators>

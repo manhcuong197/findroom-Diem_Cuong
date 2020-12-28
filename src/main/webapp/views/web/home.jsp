@@ -102,7 +102,10 @@
             <div class="news-form">
     
               <div class="image">
-                    <img src="https://timviec365.com/pictures/news/2020/03/13/pvk1584102929.jpg" alt="#" class="img">                    
+              <a href="<c:url value='/chi-tiet?id=${item.id}' />" class="room-img--link">
+										<img src="https://timviec365.com/pictures/news/2020/03/13/pvk1584102929.jpg" class="img">
+									</a>
+                                        
                 </div>
                 <div class="text">
                     <p class="news-title">${item.description }</p>
