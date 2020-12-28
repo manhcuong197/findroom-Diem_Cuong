@@ -80,7 +80,7 @@ input[type=text] {
 }
 
 .search-container button:hover {
-  background: #ccc;
+  background:rgb(181, 225, 255);
 }
 
 .search-bar{
@@ -89,6 +89,7 @@ input[type=text] {
 }
 
 .dropdown {
+	width: 180px;
     float: left;
     overflow: hidden;
 }
@@ -199,7 +200,7 @@ input[type=text] {
     width: 48%;
     margin: 8px;
     height: 180px;
-    border: 0.5px solid black;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
     background-color: #faeed849;
 }
 .image{
@@ -232,7 +233,11 @@ input[type=text] {
     font-weight: 600;
 }
 #dangtin{
-	float: right;
+	float: right;	
+}
+
+.search-container button.loctin{
+	float: left;	
 }
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
@@ -253,6 +258,7 @@ input[type=text] {
   }
   .search-bar{
   	float: left;
+  	margin-right: 150px;
   }
   .dropdown {
       float: none;
@@ -342,6 +348,12 @@ input[type=text] {
             </button>
             <div class="dropdown-content">
               <a href="#" class="all">Tất cả</a>
+               <a href="#">Dưới 1 triệu</a>
+              <a href="#">1 -2 triệu</a>
+              <a href="#">2 - 3 triệu</a>
+              <a href="#">3 - 4 triệu</a>
+              <a href="#">4 - 5 triệu</a>
+              <a href="#">Trên 5 triệu</a>
             </div>
         </div> 
         <div class="dropdown">
@@ -350,8 +362,15 @@ input[type=text] {
             </button>
             <div class="dropdown-content">
               <a href="#" class="all">Tất cả</a>
+               <a href="#">Dưới 15 m2</a>
+              <a href="#">15-20 m2</a>
+              <a href="#">20-25 m2</a>
+              <a href="#">25-30 m2</a>
+              <a href="#">30-35 m2</a>
+              <a href="#">Trên 35 m2</a>
             </div>
         </div> 
+        <button type="submit" class="loctin">Lọc tin</button>
     </div>
 
     <br>
