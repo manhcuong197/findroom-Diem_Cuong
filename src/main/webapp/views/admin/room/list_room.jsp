@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
 <%@include file="/common/taglib.jsp"%>
+<c:url var="APIurl" value="/api-admin-room" />
+<c:url var="NewURL" value="/admin-room-list?type=list" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -49,6 +51,7 @@
 									<thead>
 
 										<tr>
+											<th><input type="checkbox" id="checkAll"></th>
 											<th>Ảnh</th>
 											<th>Mô tả</th>
 											<th>Thông tin phòng</th>
@@ -58,6 +61,7 @@
 									</thead>
 									<c:forEach var="item" items="${room.listResult }">
 										<tbody>
+											<td><input type="checkbox" id="checkbox_${item.id}" value="${item.id}"></td>
 											<td>${item.image}</td>
 											<td>${item.description}</td>
 											<td>Giá tiền:${item.price} triệu/tháng, Diện
@@ -80,5 +84,31 @@
 	</div>
 	</div>
 	<!-- /.main-content -->
+	<script>
+			
+			$("#btnDelete").click(function() {
+				var data = {};
+				var ids = $('tbody input[type=checkbox]:checked').map(function () {
+		            return $(this).val();
+		        }).get();
+				data['ids'] = ids;
+				deleteRoom(data);
+			});
+			
+			function deleteRoom(data) {
+		        $.ajax({
+		            url: '${APIurl}',
+		            type: 'DELETE',
+		            contentType: 'application/json',
+		            data: JSON.stringify(data),
+		            success: function (result) {
+		                window.location.href = "${NewURL}";
+		            },
+		            error: function (error) {
+		            	window.location.href = "${NewURL}?type=list&maxPageItem=2&page=1&message=error_system";
+		            }
+		        });
+		    }
+		</script>
 </body>
 </html>

@@ -298,8 +298,8 @@
 	</div>
 	<script>
 		
-		$('#btnAddOrUpdateNew').click(function() {
-			
+		$('#btnAddOrUpdateNew').click(function(e) {
+			e.preventDefault();
 			var data = {};
 			var formData = $('#formSubmit').serializeArray();
 			$.each(formData, function(i, v) {
