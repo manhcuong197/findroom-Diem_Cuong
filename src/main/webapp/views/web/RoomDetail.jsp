@@ -56,6 +56,7 @@
 			</div>
 		</div>
 
+
 		<div class="info-detail">
 			<p class="title">${room.description }</p>
 

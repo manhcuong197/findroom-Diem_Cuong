@@ -8,7 +8,6 @@
 <title>Trang Trủ</title>
 </head>
 <body>
-	
     <div class="search-container">
         <form action="" class="search-bar">
           <input type="text" placeholder="Tìm kiếm.." name="search">
