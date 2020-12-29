@@ -12,6 +12,7 @@
             <c:if test="${not empty USERMODEL }">			
 				<a id="login" href="<c:url value='/thoat?action=logout' />">Thoát</a>
 				<a id="login" href="#" >Xin chào, ${USERMODEL.username}</a>
+				<a id="login" class="btn" href="<c:url value='/post-room' />">Đăng tin</a>
 			</c:if>
 			<c:if test="${empty USERMODEL }">
 				<a id="login" href="<c:url value='/Dang-nhap?action=login' />">Đăng nhập</a>

@@ -1,15 +1,26 @@
 package com.findroom.model;
 
+import java.sql.Timestamp;
+
 public class CommentModel extends AbstractModel<CommentModel> {
-	private Long id_post;
+	
 	private Long id_user;
-	private String confirm_content;
-	private String time;
-	public Long getId_post() {
-		return id_post;
+	private String confirm_comment;
+	private Timestamp time;
+	private String userComment;
+	private Long  id_room;
+	
+	public Long getId_room() {
+		return id_room;
 	}
-	public void setId_post(Long id_post) {
-		this.id_post = id_post;
+	public void setId_room(Long id_room) {
+		this.id_room = id_room;
+	}
+	public String getUserComment() {
+		return userComment;
+	}
+	public void setUserComment(String userComment) {
+		this.userComment = userComment;
 	}
 	public Long getId_user() {
 		return id_user;
@@ -17,17 +28,19 @@ public class CommentModel extends AbstractModel<CommentModel> {
 	public void setId_user(Long id_user) {
 		this.id_user = id_user;
 	}
-	public String getConfirm_content() {
-		return confirm_content;
+	
+	public String getConfirm_comment() {
+		return confirm_comment;
 	}
-	public void setConfirm_content(String confirm_content) {
-		this.confirm_content = confirm_content;
+	public void setConfirm_comment(String confirm_comment) {
+		this.confirm_comment = confirm_comment;
 	}
-	public String getTime() {
+	public Timestamp getTime() {
 		return time;
 	}
-	public void setTime(String time) {
+	public void setTime(Timestamp time) {
 		this.time = time;
 	}
+	
 	
 }

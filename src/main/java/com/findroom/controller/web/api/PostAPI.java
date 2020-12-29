@@ -1,4 +1,4 @@
-package com.findroom.controller.admin.api;
+package com.findroom.controller.web.api;
 
 import java.io.IOException;
 
@@ -14,8 +14,8 @@ import com.findroom.service.IRoomService;
 import com.findroom.utils.HttpUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-@WebServlet(urlPatterns = {"/api-admin-room"})
-public class RoomAPI extends HttpServlet {
+@WebServlet(urlPatterns = {"/api-web-post"})
+public class PostAPI extends HttpServlet {
 
 	private static final long serialVersionUID = -6251591877578709052L;
 	

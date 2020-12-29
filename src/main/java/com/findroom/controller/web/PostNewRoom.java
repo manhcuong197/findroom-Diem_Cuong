@@ -19,8 +19,8 @@ import com.findroom.service.IRoomService;
 import com.findroom.service.IRoom_typeService;
 
 
-@WebServlet(urlPatterns = {"/chi-tiet"})
-public class RoomDetail extends HttpServlet {
+@WebServlet(urlPatterns = {"/post-room"})
+public class PostNewRoom extends HttpServlet {
 
 	private static final long serialVersionUID = 4965199485492466775L;
 	@Inject
@@ -34,16 +34,8 @@ public class RoomDetail extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String id_room = req.getParameter("id");
-		Long idRoom;
-		idRoom = Long.parseLong(id_room);
-		CommentModel commentModel = new CommentModel();
-		commentModel.setListResult(commentService.findById_room(idRoom));
-		req.setAttribute("comment", commentModel);
-		req.setAttribute("room", roomService.findOne(idRoom));
-		req.setAttribute("type", room_typeService.findAll());
-		req.setAttribute("address", addressService.findAll());
-		RequestDispatcher rd = req.getRequestDispatcher("/views/web/RoomDetail.jsp");
+		
+		RequestDispatcher rd = req.getRequestDispatcher("/views/web/PostNew.jsp");
 		rd.forward(req, resp);
 	}
 	
