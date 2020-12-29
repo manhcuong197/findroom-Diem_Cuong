@@ -1,21 +1,16 @@
-* {
-     margin: 0;
-     padding: 0;
- }
- body {
-     font-family: 'Verdana', sans-serif;
- }
-
+  
  .clear {
      clear: both;
  }
  footer {
-    background-color: rgba(165, 186, 194, 0.651);
-    position: relative;
+    
+ 	height:200px;
     z-index: 1;
+
 }
 
 footer > ul {
+	background-color: rgba(165, 186, 194, 0.651);
     list-style: none outside none;
     margin-left: 100px;
     max-width: 1200px;
@@ -44,7 +39,7 @@ footer > ul li .text {
     color: #353535;
     font-size: 13px;
     line-height: 20px;
-    margin-left: 105px;
+    margin-left: 10px;
     position: relative;
     text-align: justify;
 }

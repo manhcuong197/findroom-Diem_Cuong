@@ -1,6 +1,9 @@
  .container {
             margin-top: 30px;
+             margin-bottom: 30px;
             font-family: 'Lato', sans-serif;
+             background-color: white;
+             z-index: 2;
         }
 
         .image {
