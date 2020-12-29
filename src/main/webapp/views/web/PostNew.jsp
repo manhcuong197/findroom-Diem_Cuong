@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@include file="/common/taglib.jsp"%>
 <c:url var="APIurl" value="/api-web-post" />
-<c:url var="NewURL" value="/post-room" />
+<c:url var="NewURL" value="/trang-chu" />
 <html>
 <head>
 <title>Cập nhật thông tin Phòng trọ</title>
