@@ -14,11 +14,11 @@
 <body>
     <form class="form-sign-up" id="formSignup" name="myform">
         <h1>Đăng ký</h1>
-        <input  placeholder="Tài khoản" name="username" type="text" />
-        <input  placeholder="Mật khẩu" name="password" type="password" />
-         <input  placeholder="Số điện thoại" name="phone" type="text" />
-         <input  placeholder="Email" name="email" type="text" />
-        <input  placeholder="Địa chỉ" name="address" type="text"/>
+        <input  placeholder="Tài khoản" name="username" id="user" type="text" />
+        <input  placeholder="Mật khẩu" name="password" id="pass" type="password" />
+         <input  placeholder="Số điện thoại" id="phone" name="phone" type="text" />
+         <input  placeholder="Email" name="email" type="email" />
+        <input  placeholder="Địa chỉ" name="address" id="address" type="text"/>
         
         <button type="submit" id="test">Đăng ký</button>
         <div class="go-sign-in">

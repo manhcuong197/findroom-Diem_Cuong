@@ -14,33 +14,33 @@
             text-align: center;
         }
 
-        .form-sign-up input[type="text"] {
-            background: url("./images/user.png") no-repeat 0px 4px;
+        .form-sign-up input#user {
+            background: url("../../views/images/user.png") no-repeat 0px 4px;
             background-size: 20px;
         }
 
         .form-sign-up input[type="email"] {
-            background: url("./images/email.png") no-repeat 0px 4px;
+            background: url("../../views/images/email.png") no-repeat 0px 4px;
             background-size: 25px;
         }
 
         .form-sign-up input#address{
-            background: url("./images/address.png") no-repeat 0px 4px;
+            background: url("../../views/images/address.png") no-repeat 0px 4px;
             background-size: 23px;
         }
 
         .form-sign-up input#phone{
-            background: url("./images/phone.png") no-repeat 0px 4px;
+            background: url("../../views/images/phone.png") no-repeat 0px 4px;
             background-size: 22px;
         }
 
         .form-sign-up input#pass {
-            background: url("./images/pass.png") no-repeat 0px 3.5px;
+            background: url("../../views/images/pass.png") no-repeat 0px 3.5px;
             background-size: 20px;
         }
 
         .form-sign-up input#cf-pass {
-            background: url("./images/cf_pass.png") no-repeat 0px 3.5px;
+            background: url("../../views/images/cf_pass.png") no-repeat 0px 3.5px;
             background-size: 23px;
         }
 

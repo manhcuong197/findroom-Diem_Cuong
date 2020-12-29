@@ -18,13 +18,13 @@
     width: 2%;
   }
   
-  .form-sign-in input[type="email"] {
-    background: url("../images/email.png") no-repeat 0px 4px;
+  .form-sign-in input[type="text"] {
+    background: url("../../views/images/user.png") no-repeat 0px 4px;
     background-size: 25px;
   }
   
   .form-sign-in input[type="password"] {
-    background: url("../images/pass.png") no-repeat 0px 3.5px;
+    background: url("../../views/images/pass.png") no-repeat 0px 3.5px;
     background-size: 20px;
   }
   
