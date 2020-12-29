@@ -50,6 +50,13 @@
                     </a>
                     <b class="arrow"></b>
                 </li>
+                 <li>
+                    <a href='<c:url value="/admin-user-list?type=listUser"/>'>
+                        <i class="menu-icon fa fa-caret-right"></i>
+                        DS Tài khoản
+                    </a>
+                    <b class="arrow"></b>
+                </li>
             </ul>
         </li>
     </ul>

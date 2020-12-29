@@ -27,7 +27,7 @@ public class RoomMapper implements RowMapper<RoomModel> {
 			roomModel.setPost_time(resultSet.getString("post_time"));
 			roomModel.setStatus(resultSet.getString("status"));
 			roomModel.setDescription(resultSet.getString("description"));
-			
+			roomModel.setId_user(resultSet.getLong("id_user"));
 			return roomModel;
 		} catch (SQLException e) {
 			return null;

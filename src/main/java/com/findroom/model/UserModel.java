@@ -8,7 +8,25 @@ public class UserModel extends AbstractModel<UserModel> {
 	private String email;
 	private String address;
 	private RoleModel roleModel=new RoleModel();
+	private String type;
+	private String roleUser;
 	
+	public String getRoleUser() {
+		return roleUser;
+	}
+
+	public void setRoleUser(String roleUser) {
+		this.roleUser = roleUser;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
 	public RoleModel getRoleModel() {
 		return roleModel;
 	}

@@ -1,5 +1,7 @@
 package com.findroom.model;
 
+import com.fasterxml.jackson.databind.jsontype.impl.AsExistingPropertyTypeSerializer;
+
 public class RoomModel extends AbstractModel<RoomModel> {
 	private Long id_room_type;
 	private Long id_address;
@@ -21,7 +23,49 @@ public class RoomModel extends AbstractModel<RoomModel> {
 	private String districtRoom;
 	private String cityRoom;
 	private String type;
+	private Long id_user;
+	private String userNameRoom;
+	private String passwordRoom;
+	private String phoneRoom;
+	private String emailRoom;
+	private String addressRoom;
 	
+	public String getUserNameRoom() {
+		return userNameRoom;
+	}
+	public void setUserNameRoom(String userNameRoom) {
+		this.userNameRoom = userNameRoom;
+	}
+	public String getPasswordRoom() {
+		return passwordRoom;
+	}
+	public void setPasswordRoom(String passwordRoom) {
+		this.passwordRoom = passwordRoom;
+	}
+	public String getPhoneRoom() {
+		return phoneRoom;
+	}
+	public void setPhoneRoom(String phoneRoom) {
+		this.phoneRoom = phoneRoom;
+	}
+	public String getEmailRoom() {
+		return emailRoom;
+	}
+	public void setEmailRoom(String emailRoom) {
+		this.emailRoom = emailRoom;
+	}
+	public String getAddressRoom() {
+		return addressRoom;
+	}
+	public void setAddressRoom(String addressRoom) {
+		this.addressRoom = addressRoom;
+	}
+	public Long getId_user() {
+		return id_user;
+	}
+	public void setId_user(Long id_user) {
+		this.id_user = id_user;
+	}
 	public String getType() {
 		return type;
 	}
