@@ -21,7 +21,7 @@
 </head>
 
 <body>
-	<div class="container">
+	<div class="rdt-container">
 		<div class="image">
 			<div class="w3-content w3-display-container">
 				<img class="mySlides"

@@ -6,16 +6,16 @@
 <html>
 <head>
 <title>Cập nhật thông tin Phòng trọ</title>
+<script src="<c:url value='/template/vendor/jquery-3.5.1.min.js' />"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link href=" <c:url value="./template/web/PostNews.css"/>" rel="stylesheet" type="text/css" media="all"/>
 </head>
 <body>
 	<div class="main-content">
 		<div class="main-content-inner">
 			<div class="breadcrumbs" id="breadcrumbs">
-				<ul class="breadcrumb">
-					<li><i class="ace-icon fa fa-home home-icon"></i> <a href="#">Trang
-							chủ</a></li>
-					<li class="active">Chỉnh sửa phòng trọ</li>
-				</ul>
 				<!-- /.breadcrumb -->
 			</div>
 			<div class="page-content">
@@ -25,15 +25,6 @@
 							<div class="alert alert-${alert}">${messageResponse}</div>
 						</c:if>
 						<form id="formSubmit">
-							<div class="form-group">
-								<label class="col-sm-3 control-label no-padding-right">Người
-									đăng </label>
-								<div class="col-sm-9">
-										<input type="text" class="form-control" name="userNameRoom"
-											id="userNameRoom" >
-
-								</div>
-							</div>
 							<br /> <br />
 							<div class="form-group">
 								<label class="col-sm-3 control-label no-padding-right">Kiểu
@@ -53,25 +44,31 @@
 							<div class="form-group">
 								<label class="col-sm-3 control-label no-padding-right">Số
 									nhà </label>
-									<input type="text" class="form-control" name="numberRoom"
+									
+								<div class="col-sm-9">
+                                    <input type="text" class="form-control" name="numberRoom"
 											id="numberRoom" >
-								<div class="col-sm-9"></div>
+                                </div>
 							</div>
 							<br /> <br />
 							<div class="form-group">
-								<label class="col-sm-3 control-label no-padding-right">Xã
+								<label class="col-sm-3 control-label no-padding-right">Phường, xã
 								</label>
-								<input type="text" class="form-control" name="streetRoom"
+								
+								<div class="col-sm-9">
+                                    <input type="text" class="form-control" name="streetRoom"
 											id="street" >
-								<div class="col-sm-9"></div>
+                                </div>
 							</div>
 							<br /> <br />
 							<div class="form-group">
-								<label class="col-sm-3 control-label no-padding-right">Huyện
+								<label class="col-sm-3 control-label no-padding-right">Quận, huyện
 								</label>
-								<input type="text" class="form-control" name="districtRoom"
+								
+								<div class="col-sm-9">
+                                    <input type="text" class="form-control" name="districtRoom"
 											id="districtRoom" >
-								<div class="col-sm-9"></div>
+                                </div>
 							</div>
 							
 							<br /> <br />
@@ -189,8 +186,8 @@
 								<label class="col-sm-3 control-label no-padding-right">Mô
 									tả </label>
 								<div class="col-sm-9">
-									<input type"text" rows="" cols="" id="description" name="description"
-										style="width: 945px; height: 50px"></input>
+									<input type="text" rows="" cols="" id="description" name="description"
+										style="width: 465px; height: 50px"></input>
 								</div>
 							</div>
 							<br /> <br />
@@ -198,19 +195,10 @@
 								<label class="col-sm-3 control-label no-padding-right">Ảnh
 								</label>
 								<div class="col-sm-9">
-									<input type="text" class="form-control" id="image" name="image"
-										 />
+									<input type="file" name="file" id="file" class="inputfile" />
 								</div>
 							</div>
-							<br /> <br />
-							<div class="form-group">
-								<label class="col-sm-3 control-label no-padding-right">post_time
-								</label>
-								<div class="col-sm-9">
-									<input type="text" class="form-control" id="post_time"
-										name="post_time">
-								</div>
-							</div>
+		
 							<br /> <br />
 							<div class="form-group">
 								<div class="col-sm-12">
@@ -227,7 +215,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="<c:url value='/template/vendor/jquery-3.5.1.min.js' />"></script>
+
 	
 	<script type="text/javascript">
 		$('#btnAddOrUpdateNew').click(function(e) {
