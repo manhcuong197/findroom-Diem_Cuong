@@ -12,6 +12,7 @@
 <link href=" <c:url value="/template/web/home.css"/>" rel="stylesheet" type="text/css" media="all"/>
 <script src="https://kit.fontawesome.com/98524fe5fa.js" crossorigin="anonymous"></script>
 <link href=" <c:url value="/template/web/footer.css"/>" rel="stylesheet" type="text/css" media="all"/>
+
 </head>
 <body>
 	<!-- header -->
