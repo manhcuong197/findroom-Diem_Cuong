@@ -9,13 +9,15 @@
         <a href="#timnguoioghep">Tìm người ở ghép</a> 
         <a href="javascript:void(0);" class="icon" onclick="myFunction()"> 
             <i class="fa fa-bars"></i>
-            <c:if test="${not empty USERMODEL }">			
-				<a id="login" href="<c:url value='/thoat?action=logout' />">Thoát</a>
-				<a id="login" href="#" >Xin chào, ${USERMODEL.username}</a>
+            <c:if test="${not empty USERMODEL }">	
+				<a id="login" class="active" href="<c:url value='/thoat?action=logout' />">Thoát</a>
+				<a id="login" class="active" href="#" >Xin chào, ${USERMODEL.username}</a>
+				<a id="login" class="btn" href="<c:url value='#' />">Đăng tin</a>		
 			</c:if>
 			<c:if test="${empty USERMODEL }">
-				<a id="login" href="<c:url value='/Dang-nhap?action=login' />">Đăng nhập</a>
-				<a id="login" href="<c:url value='/Dang-ky?action=signup' />">Đăng ký</a>
+				<a id="login" class="active" href="<c:url value='/Dang-nhap?action=login' />">Đăng nhập</a>
+				<a id="login" class="active" href="<c:url value='/Dang-ky?action=signup' />">Đăng ký</a>
+				<a id="login" class="btn" href="<c:url value='#' />">Đăng tin</a>
 			</c:if>
 		</a>
         
