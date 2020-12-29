@@ -1,4 +1,4 @@
-.container {
+ .container {
             margin-top: 30px;
             font-family: 'Lato', sans-serif;
         }
@@ -9,8 +9,8 @@
         }
 
         .w3-content {
-            width: 600px;
-            height: 400px;
+            width: 700px;
+            height: 450px;
         }
 
         .mySlides {
@@ -19,13 +19,13 @@
         }
 
         .info {
-            float: left;
-            width: 450px;
-            margin-left: 50px;
-            margin-right: 200px;
+            position: fixed;
+            width: 380px;
+            margin-left: 920px;
+            /* margin-right: 200px; */
             border: 0.5px solid rgb(155, 155, 155);
             border-radius: 5px;
-            padding: 20px;
+            padding: 10px;
         }
 
         .avatar {
@@ -56,9 +56,10 @@
             color: #3a9dfa;
         }
 
+
         .info-detail {
             float: left;
-            width: 800px;
+            width: 700px;
             margin-left: 200px;
             font-size: 18px ;
         }
@@ -77,6 +78,42 @@
 
         .info-detail h3{
             font-weight: 600;
+        }
+
+        .detail{
+            box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .fa-comments{
+            color: rgb(9, 77, 224);
+            font-size: 30px;
+            margin-left: 10px;
+        }
+
+        .box-cmt{
+            float: left;
+            font-size: 14px;
+            padding: 5px;
+            resize: none;
+            margin-left: 140px;
+            border-radius: 5px;
+            width: 500px;
+            margin-top: -50px;
+        }
+        .cmt{
+            padding: 20px;
+            height: 200px;
+            box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            margin-bottom: 100px;
+            width: 700px;
+            /* border: 0.5px solid rgb(155, 155, 155); */
+        }
+        .cmt-avt{
+            margin-left: 60px;
+            margin-top: 10px;
+            width: 60px;
+            height: 60px;
         }
         table{
             width: 100%;
@@ -101,6 +138,8 @@
             }
 
             .info{
+                position: relative;
+                float: left;
                 margin-top: 20px;
                 margin-left: 30px;
             }
@@ -111,5 +150,17 @@
             
             .info-detail table{
                 margin-right: 10px;
+            }
+            .cmt{
+                width: 500px;
+            }
+
+            .cmt-avt{
+                margin-left: 0px;
+            }
+
+            .box-cmt{
+                width: 350px;
+                margin-left: 80px;
             }
         }

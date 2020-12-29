@@ -82,6 +82,18 @@
                 </tr>
                 
             </table>  
+             <div class="cmt">
+                <b>Bình luận</b><i class="fas fa-comments"></i>
+                <br>
+                <div class="user-cmt">
+                    <div class="cmt-avt">
+                        <img class="avt-img"
+                        src="https://www.pngitem.com/pimgs/m/421-4212266_transparent-default-avatar-png-default-avatar-images-png.png"
+                        alt="avt">
+                    </div>                
+                    <textarea class="box-cmt" name="" id="" cols="30" rows="5" placeholder="Bình luận.."></textarea>
+                </div>
+            </div>
         </div>
 
     </div>
