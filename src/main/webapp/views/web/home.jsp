@@ -8,7 +8,6 @@
 <title>Trang Trủ</title>
 </head>
 <body>
-    
     <div class="search-container">
         <form action="" class="search-bar">
           <input type="text" placeholder="Tìm kiếm.." name="search">
@@ -80,7 +79,7 @@
         <c:forEach var="item" items="${room.listResult }">
         </c:forEach>
         <div class="news-container">
-        <c:forEach var="item" items="${room.listResult }">
+        <c:forEach var="item" items="${room.listResult }" >
             <div class="news-form">
     
               <div class="image">

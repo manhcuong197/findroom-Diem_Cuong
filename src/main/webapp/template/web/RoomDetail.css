@@ -263,4 +263,16 @@
                 margin-left: 45px;
                 font-size: 10px;
             }
+            .cmt{
+                width: 500px;
+            }
+
+            .cmt-avt{
+                margin-left: 0px;
+            }
+
+            .box-cmt{
+                width: 350px;
+                margin-left: 80px;
+            }
         }
